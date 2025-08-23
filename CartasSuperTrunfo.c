@@ -16,7 +16,7 @@ double Area, Pib, densidadePopulacional2, PIBperCapita2;
 unsigned long  Populacao;
 double superPoder2;
 
-// ENTRADA CARTA 0
+// ENTRADA CARTA 1
 printf("INICIANDO CADASTRO DA PRIMEIRA CARTA\n");
 
 printf("Digite uma letra de 'a' ao 'h' para representar um dos 8 estados: ");
@@ -47,7 +47,7 @@ superPoder1 =  populacao + area + pib + qtdPontosTuristicos + PIBperCapita + (1.
 
 printf("\nCADASTRO DA PRIMEIRA CARTA FINALIZADO\n\n");
 
-// ENTRADA CARTA 1
+// ENTRADA CARTA 2
 
 printf("INICIANDO CADASTRO DA SEGUNDA CARTA\n");
 
@@ -80,7 +80,7 @@ superPoder2 =  Populacao + Area + Pib + QtdPontosTuristicos + PIBperCapita2 + (1
 
 printf("\nCADASTRO DE CARTAS FINALIZADO\n\n");
 
-// // SAIDA CARTA 0
+// // SAIDA CARTA 1
 printf("CARTA 0\n");
 printf("Estado: %c\n", estado);
 printf("Codigo  da carta: %s\n", codigoDaCarta);
@@ -93,7 +93,7 @@ printf("Densidade Populacional: %.2lf hab/km²\n", densidadePopulacional);
 printf("PIB per Capita: %.2lf reais\n" , PIBperCapita);
 printf("Super poder: %.2lf\n\n", superPoder1);
 
-//SAIDA CARTA 1
+//SAIDA CARTA 2
 printf("CARTA 1\n");
 printf("Estado: %c\n", Estado2);
 printf("Codigo  da carta: %s\n", CodigoDaCarta);
@@ -108,24 +108,15 @@ printf("Super poder: %.2lf\n\n", superPoder2);
 
 
 //COMPARANDO_ATRIBUTOS_DAS_CARTAS
-int res1 = Populacao > populacao;
-int res2 = Area > area;
-int res3 = Pib > pib;
-int res4 = QtdPontosTuristicos > qtdPontosTuristicos;
-int res5 = densidadePopulacional2 < densidadePopulacional;
-int res6 = PIBperCapita2 > PIBperCapita;
-int res7 = superPoder2 > superPoder1;
+if (populacao > Populacao){
+    printf("Carta 1 - %s: %lu\n", cidade, populacao);
+    printf("Carta 2 - %s: %lu\n", Cidade, Populacao);
+    printf("Resultado: Carta 1 (%s) venceu!\n", cidade);}
 
-
-printf("COMPARACAO DE CARTAS\n\n");
-
-printf("Carta: %d ganhou\n", res1);
-printf("Carta: %d ganhou\n", res2);
-printf("Carta: %d ganhou\n", res3);
-printf("Carta: %d ganhou\n", res4);
-printf("Carta: %d ganhou\n", res5);
-printf("Carta: %d ganhou\n", res6);
-printf("carta: %d ganhou\n\n", res7);
+else {
+    printf("Carta 1 - %s: %lu\n", cidade, populacao);
+    printf("Carta 2 - %s: %lu\n", Cidade, Populacao);
+    printf("Resultado: Carta 2 (%s) venceu!\n", Cidade);}
 
 
 return 0;
